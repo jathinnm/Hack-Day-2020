@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import loginImage from '../utils/JakeLoginImage.png'
+import loginImage from '../utils/NewJakeFromStateFarm.png'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -10,11 +10,15 @@ import Logo from '../utils/StateFarmLogo.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: '1',
+      height: '100%'
+    },
+    mainContainer:{
+        overflowY: "auto",
+        height: '100%'
     },
     loginImage:{
         width: '100%',
-        // height: '100vh',
+        height: '102vh',
         objectFit: 'fill',
     }, 
     logo:{
@@ -25,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         // marginLeft: "20vh",
     }, 
     gridContainer:{
-        marginTop: '10vh'
+        marginTop: 'vh'
     },
     textField:{
         // border: "solid 2px black",
@@ -45,12 +49,17 @@ const useStyles = makeStyles((theme) => ({
 
   }));
 
+  window.addEventListener("scroll", noscroll);
+  function noscroll(){
+      window.scrollTo(0,0);
+  }
+
 export default function(){
     const classes = useStyles();
     return(
         <div className = {classes.root}>
-            <Grid container spacing={10} >
-                <Grid container item  xs={5} >
+            <Grid container spacing={10} className={classes.mainContainer}>
+                <Grid container item  xs={5} className={classes.mainContainer}>
                     <img src={loginImage} alt="Jake" className = {classes.loginImage} />
                 </Grid>
                 <Grid container item xs={7} spacing={6}
@@ -59,18 +68,11 @@ export default function(){
                      alignItems="center"
                      className={classes.gridContainer}
                      >
-                     <Grid container 
-                        direction="column"
-                        alignItems="center"
-                        spacing={10}
-                        justify = "center"
-                     >
                         <Grid item container alignItems = "center" justify ="center">
                                 <img src={Logo} alt="Logo" className = {classes.logo} />
                                 <Grid item alignItems = 'center' justify= 'center'>
                                     <h1 className={classes.title}>ET Navigation Dashboard</h1>
                                 </Grid>
-                        </Grid>
                     </Grid>
                     <Grid item className={classes.gridContainer} >
                         <TextField
