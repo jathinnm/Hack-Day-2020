@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     loginImage:{
         width: '100%',
-        height: '102vh',
+        height: '105vh',
         objectFit: 'fill',
     }, 
     logo:{
@@ -49,10 +49,10 @@ const useStyles = makeStyles((theme) => ({
 
   }));
 
-  window.addEventListener("scroll", noscroll);
-  function noscroll(){
-      window.scrollTo(0,0);
-  }
+//   window.addEventListener("scroll", noscroll);
+//   function noscroll(){
+//       window.scrollTo(0,0);
+//   }
 
 export default function(){
     const classes = useStyles();
@@ -68,7 +68,7 @@ export default function(){
                      alignItems="center"
                      className={classes.gridContainer}
                      >
-                        <Grid item container alignItems = "center" justify ="center">
+                        <Grid item container direction = 'column'alignItems = "center" justify ="center">
                                 <img src={Logo} alt="Logo" className = {classes.logo} />
                                 <Grid item alignItems = 'center' justify= 'center'>
                                     <h1 className={classes.title}>ET Navigation Dashboard</h1>
