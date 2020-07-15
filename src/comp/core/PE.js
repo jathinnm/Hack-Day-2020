@@ -37,6 +37,9 @@ teams:{
 },
 spaceText:{
   color:'white'
+},
+title:{
+  marginLeft: "10vh"
 }
 
   }));
@@ -45,6 +48,10 @@ spaceText:{
 //   function noscroll(){
 //       window.scrollTo(0,0);
 //   }
+
+
+
+
 const areas = ["Data Area", 'Architecture & IT Services Area', 'IT Operations Area', 'Infrastructure Area','Infrastructure Area','Resiliency Engineering']
 const leaders = ['DeWayne Griffin','Jeff L Bertrand','Mike Miller','Margo Hodges','Ines Halloran','Mike Fletcher']
 const teams = [['Data Discovery and Enablement',
@@ -80,22 +87,29 @@ const teams = [['Data Discovery and Enablement',
           ['Resiliency Engineering Suite 1']
   ]
 var tmparr =[]
-export default function(){
+var clicked = false
+export default function(props){
+  const [clicked, setClicked]= React.useState(false)
+
+  const handleClick = event =>{
+    props.parentCallback(true)
+    console.log('hi')
+  }
     const classes = useStyles();
     return(
       <div className={classes.root}>
         <Grid container spacing ={10} direction = "column">
-            <Grid item>
+            <Grid item className={classes.title}>
                 <Header title = "Platform Enablement Division"/>
              </Grid>
              <Grid item container spacing={10} justify="center">
             
                 {areas.map(function (area,i) {
-                  tmparr = [area, leaders[i], teams[i], teams[i]]
+                  tmparr = [area, leaders[i], teams[i]]
                   if(tmparr != null){
       return (
                     <Grid item xs={6} alignItems = 'center' justify ='center' >
-                      <Button variant="contained"  className = {classes.button}  >
+                      <Button variant="contained"  className = {classes.button} onClick ={handleClick} >
                      
                           <Grid container item alignItems='center' direction = 'column' >
                             <Grid item>
@@ -106,7 +120,6 @@ export default function(){
                                 {tmparr[1]}
                             </h3>
                             </Grid>
-                            
                           </Grid>  
                         </Button>
                         <li className={classes.spaceText}>sadhbckjsbdc</li>

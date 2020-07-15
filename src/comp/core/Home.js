@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
       },
       missionStatement:{
           padding:'2%',
+      },
+      title:{
+        marginLeft: "15vh"
       }
 
   }));
@@ -48,7 +51,7 @@ export default function(){
       <div className={classes.root}>
       
       <Grid container spacing ={10} direction = "column" >
-            <Grid item>
+            <Grid item className = {classes.title}>
                 <Header title = "ET Navigation Dashboard">
                 </Header>
              </Grid>
@@ -66,6 +69,7 @@ export default function(){
                     </Grid>
                 </Paper>
             </Grid>
+            
         </Grid>
      
         </div>
