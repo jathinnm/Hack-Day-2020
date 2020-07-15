@@ -134,9 +134,9 @@ else if ( clicked == true) {
             >
                 <Tab icon = {<HomeSharpIcon/>} {...a11yProps(0)} />
             
-                <Tab className={classes.departmentTabs} {...a11yProps(1)} >sjhdfb</Tab>
-                <Tab label="" {...a11yProps(2)} />
-                <Tab label= ""{...a11yProps(3)} />
+                <Tab className={classes.departmentTabs}label="CE" {...a11yProps(1)} />
+                <Tab label="PE" {...a11yProps(2)} />
+                <Tab label="SE" {...a11yProps(3)} />
         
             </Tabs>
         </Grid>
