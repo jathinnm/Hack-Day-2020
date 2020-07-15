@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Header from '../generic/Header.js'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import UpdateForm from './UpdateForm';
 
 const drawerWidth = 100;
 const useStyles = makeStyles((theme) => ({
@@ -66,8 +67,11 @@ export default function(){
                     </Grid>
                 </Paper>
             </Grid>
+            <Grid item>
+                <UpdateForm />
+            </Grid>
         </Grid>
-     
+        
         </div>
     );
 }
