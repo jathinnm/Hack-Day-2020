@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   //   }
   const areas = ['IT Risk and Compliance', 'Planning & Management']
   const leaders = ['Brett Weber','Randy McBeath']
-  const teams = []
+  const teams = [['IT Control Mgmt, IT R&C Data & Tech','IT R&C Strategic Services','Technology Vendor Mgmt Office','IT Bus Cont, IT Asset Mgmt','IT GRC Practicioner Svcs']['Enablement','Monitoring & Control','Workforce']]
   var tmparr =[]
   export default function(){
       const classes = useStyles();
