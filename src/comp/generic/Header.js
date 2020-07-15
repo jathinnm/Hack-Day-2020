@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: drawerWidth,
       backgroundColor: ''
     },
+    
   },
 }));
 
@@ -36,9 +37,9 @@ export default function ButtonAppBar(props) {
       <CssBaseline />
      
         
-          <Typography variant="h5" noWrap>
+          <h1>
             {title}
-          </Typography>
+          </h1>
        
       
     </div>

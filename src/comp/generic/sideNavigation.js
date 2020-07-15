@@ -13,6 +13,7 @@ import Home from '../core/Home.js'
 import CE from '../core/CE.js'
 import PE from '../core/PE.js'
 import SE from '../core/SE.js'
+import DataArea from '../core/DataArea.js'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,13 +67,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function VerticalTabs() {
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const [clicked, setClicked] = React.useState(false)
 
+  const callbackFunction = (clicked)=>{
+    setClicked(clicked)
+    console.log(clicked)
+  }
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+if(clicked == false){
   return (
     <div className={classes.root}>
     <Grid container>
@@ -102,7 +109,7 @@ export default function VerticalTabs() {
         <CE/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <PE/>
+        <PE parentCallback = {callbackFunction}/>
       </TabPanel>
       <TabPanel value={value} index={3}>
         <SE/>
@@ -111,4 +118,46 @@ export default function VerticalTabs() {
       </Grid>
     </div>
   );
+}
+else if ( clicked == true) {
+  return (
+    <div className={classes.root}>
+    <Grid container>
+        <Grid item xs ={1}>
+            <Tabs
+                orientation="vertical"
+                variant="scrollable"
+                value={value}
+                onChange={handleChange}
+                aria-label="Vertical tabs example"
+                className={classes.tabs}
+            >
+                <Tab icon = {<HomeSharpIcon/>} {...a11yProps(0)} />
+            
+                <Tab className={classes.departmentTabs} {...a11yProps(1)} >sjhdfb</Tab>
+                <Tab label="" {...a11yProps(2)} />
+                <Tab label= ""{...a11yProps(3)} />
+        
+            </Tabs>
+        </Grid>
+        <Grid item xs={11}>
+
+      <TabPanel value={value} index={0}>
+        <Home/>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <CE/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <DataArea/>
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <SE/>
+      </TabPanel>
+      </Grid>
+      </Grid>
+    </div>
+  );
+
+}
 }
