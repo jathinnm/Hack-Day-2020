@@ -1,8 +1,6 @@
 # ET Navigation Dashboard
 
-## Team Name: Winterns
-
-## Team Members:
+## Winterns Team Members:
 - David Sheelam
 - Evan Quist
 - Jathin Nama
