@@ -28,16 +28,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
   const classes = useStyles();
-
+  const title = props.title
   return (
     <div className={classes.root}>
       <CssBaseline />
      
         
           <Typography variant="h5" noWrap>
-            ET Navigation Dashboard
+            {title}
           </Typography>
        
       

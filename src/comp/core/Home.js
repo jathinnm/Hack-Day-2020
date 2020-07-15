@@ -49,7 +49,8 @@ export default function(){
       
       <Grid container spacing ={10} direction = "column" >
             <Grid item>
-                <Header/>
+                <Header title = "ET Navigation Dashboard">
+                </Header>
              </Grid>
              <Grid container item alignItems='center' direction ='column' justify ='center'>
                 <Paper className ={classes.paper} >

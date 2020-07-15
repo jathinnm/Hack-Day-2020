@@ -26,7 +26,7 @@ export default function(){
       <div className={classes.root}>
         <Grid container spacing ={10} direction = "column">
             <Grid item>
-                <Header/>
+                <Header  title = "Customer Experience Division"/>
              </Grid>
             <Grid item>
                 <h1>CE Page</h1>
