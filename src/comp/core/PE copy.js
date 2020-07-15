@@ -105,8 +105,7 @@ export default function(){
                             <h3 className={classes.areas}>
                                 {tmparr[1]}
                             </h3>
-                            </Grid>
-                            
+                            </Grid>                            
                           </Grid>  
                         </Button>
                         <li className={classes.spaceText}>sadhbckjsbdc</li>

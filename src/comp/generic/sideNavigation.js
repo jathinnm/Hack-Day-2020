@@ -56,7 +56,9 @@ const useStyles = makeStyles((theme) => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
-    height: "100vh"
+    height: "200vh",
+    backgroundColor:"#E9EAEC"
+
   },
   departmentTabs:{
     marginTop: "35vh"
