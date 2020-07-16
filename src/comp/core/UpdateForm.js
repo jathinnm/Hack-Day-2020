@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, {Component} from "react";
 import TextField from "../generic/TextField";
+import Grid from '@material-ui/core/Grid';
 
 export class UpdateForm extends Component {
     constructor(props) {
@@ -25,34 +26,44 @@ export class UpdateForm extends Component {
         return(
         <div>
             <div>
-                <TextField label={"firstName"} value={this.state.firstName} onInputChange={this.onTextChange}/>
+            <Grid container spacing ={4}>
+                <Grid item>
+                <TextField label={"First Name"} value={this.state.firstName} onInputChange={this.onTextChange}/>
+                </Grid>
+                <Grid item>
+                <TextField label={"Last Name"} value={this.state.lastName} onInputChange={this.onTextChange}/>
+                </Grid>
+                <Grid item>
+                <TextField label={"Alias"} value={this.state.alias} onInputChange={this.onTextChange}/>
+                </Grid>
+            </Grid>
             </div>
             <div>
-                <TextField label={"lastName"} value={this.state.lastName} onInputChange={this.onTextChange}/>
+                <TextField label={"Last Name"} value={this.state.lastName} onInputChange={this.onTextChange}/>
             </div>
             <div>
-                <TextField label={"alias"} value={this.state.alias} onInputChange={this.onTextChange}/>
+                <TextField label={"Alias"} value={this.state.alias} onInputChange={this.onTextChange}/>
             </div>
             <div>
-                <TextField label={"role"} value={this.state.role} onInputChange={this.onTextChange}/>
+                <TextField label={"Role"} value={this.state.role} onInputChange={this.onTextChange}/>
             </div>
             <div> 
-                <TextField label={"products"} value={this.state.products} onInputChange={this.onTextChange}/>
+                <TextField label={"Products"} value={this.state.products} onInputChange={this.onTextChange}/>
             </div>
             <div> 
-                <TextField label={"languages"} value={this.state.languages} onInputChange={this.onTextChange}/>
+                <TextField label={"Languages"} value={this.state.languages} onInputChange={this.onTextChange}/>
             </div>
             <div>
-                <TextField label={"poc1"} value={this.state.poc1} onInputChange={this.onTextChange}/>
+                <TextField label={"Point of Contact #1"} value={this.state.poc1} onInputChange={this.onTextChange}/>
             </div>
             <div>
-                <TextField label={"poc2"} value={this.state.poc2} onInputChange={this.onTextChange}/>
+                <TextField label={"Point of Contact #2"} value={this.state.poc2} onInputChange={this.onTextChange}/>
             </div>
             <div>
-                <TextField label={"piDates"} value={this.state.piDates} onInputChange={this.onTextChange}/>
+                <TextField label={"Product/Project Implementation Dates(s)"} value={this.state.piDates} onInputChange={this.onTextChange}/>
             </div>
             <div>
-                <TextField label={"additionalInfo"} value={this.state.additionalInfo} onInputChange={this.onTextChange}/>
+                <TextField label={"Additional Information"} value={this.state.additionalInfo} onInputChange={this.onTextChange}/>
             </div>
             <div>
                 <button id="submit" onClick={this.onSubmit} />
