@@ -20,13 +20,13 @@ const useStyles = makeStyles((theme) => ({
     },
    spacing:{
        padding:"3vh",
-       
+
    },
    accordion:{
        backgroundColor:"#F01716",
        color: 'white',
        borderRadius: "10px"
-       
+
    },
    arrow:{
        color:'white'
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   accordionDetails: {
       backgroundColor:"#E8F0F8"
-  }, 
+  },
   infoTitles:{
       color: "black"
   }
@@ -56,13 +56,7 @@ const useStyles = makeStyles((theme) => ({
 //   }
 const areas = ["Data Area", 'Architecture & IT Services Area', 'IT Operations Area', 'Infrastructure Area','Infrastructure Area','Resiliency Engineering']
 const leaders = ['DeWayne Griffin','Jeff L Bertrand','Mike Miller','Margo Hodges','Ines Halloran','Mike Fletcher']
-const teams = ['Data Discovery and Enablement',
-  'Data Strategy',
-  'Data Management',
-  'Enterprise Content Mgmt', 
-  'Data Modernization & Test Data Mgmt',
-  'Portfolio and Delivery/FDW Sunset and Support'
-  ]
+const teams = ['Daas Ingestion','Daas Consumption','TDM-Capture/Scrub/Provision','Daas Conformance & TDM-Data Anonymization']
 var tmparr =[]
 export default function(){
     const classes = useStyles();
@@ -71,8 +65,8 @@ export default function(){
         <Grid container  spacing={2.5} direction = "column">
             <Grid item container spacing ={2}>
                 <Grid item className={classes.titleSpacing}>
-                    <h1>Data Area</h1> 
-                
+                    <h1>Data Area</h1>
+
                 </Grid>
                 <Grid item  justify = 'center' alignItems ='center'>
                     <li className={classes.spaceText}>sadhbckjsbdc</li>
@@ -80,11 +74,11 @@ export default function(){
                 </Grid>
             </Grid>
             <Grid item container>
-             
+
             </Grid>
              <Grid item container spacing={10} justify="center">
-             
-                    
+
+
                         <Grid item container xs={12} >
                                 {teams.map(function(team){
                                   return (
@@ -94,7 +88,7 @@ export default function(){
                                       expandIcon={<ExpandMoreIcon style={{ fill: 'white' }}/>}
                                       aria-controls="panel1a-content"
                                       id="panel1a-header"
-                                      
+
                                     >
                                       <h2 className={classes.heading}> {team}</h2>
                                     </AccordionSummary>
@@ -113,7 +107,7 @@ export default function(){
                                              <p>Brandon Fifer(HUH9)</p>
                                              <p>Team: DL-ET-TDM-ThunderBorg</p>
                                          </Grid>
-                                         
+
                                          <Grid item>
                                              <h3>Projected PI Date(s)</h3>
                                              <p>PI 3 Ends: September 2020</p>
@@ -121,7 +115,7 @@ export default function(){
                                          <Grid item>
                                              <h3>Additional Information</h3>
                                          </Grid>
-                                         
+
                                      </Grid>
                                     </AccordionDetails>
                                   </Accordion>
@@ -129,13 +123,13 @@ export default function(){
                                   );
                                 })}
                         </Grid>
-                               
-                   
-                
-      
+
+
+
+
             </Grid>
         </Grid>
-        
+
         </div>
     );
 }
